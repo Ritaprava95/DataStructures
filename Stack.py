@@ -6,12 +6,16 @@ class Stack:
     self.items.append(item)
    
   def pop(self):
+    if self.items == []:
+      return "Stack is empty"
     return self.items.pop()
     
   def is_empty(self):
     return self.items == []
   
   def top(self):
+    if self.items == []:
+      return "Stack is empty"
     return self.items[-1]
   
   def get_stack(self):
