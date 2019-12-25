@@ -4,17 +4,18 @@ Created on Tue Dec 24 22:28:46 2019
 
 @author: ritap
 """
-
+#Creation of a node
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
         
-        
+#Creating a linked list     
 class LinkedList:
     def __init__(self):
         self.head = None
     
+    #printing the list
     def print_list(self):
         curr_node = self.head
         
@@ -22,6 +23,7 @@ class LinkedList:
             print(curr_node.data)
             curr_node = curr_node.next
     
+    #adding node it the end
     def append(self, data):
         new_node = Node(data)
         
@@ -35,6 +37,7 @@ class LinkedList:
             last_node = last_node.next
         last_node.next = new_node
     
+    #adding node at the begining 
     def prepend(self, data):
         new_node = Node(data)
         
@@ -44,7 +47,8 @@ class LinkedList:
         
         new_node.next = self.head
         self.head = new_node
-        
+     
+    #adding node at any position
     def insert_at(self, data, index):
         new_node = Node(data)
         if self.head is None:
@@ -60,6 +64,7 @@ class LinkedList:
         new_node.next = curr_node.next
         curr_node.next = new_node
     
+    #deleting node at any position
     def delete_at(self, index):
         if self.head is None:
             print("Empty List")
