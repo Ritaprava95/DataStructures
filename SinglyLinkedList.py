@@ -24,7 +24,7 @@ class LinkedList:
             curr_node = curr_node.next
     
     #adding node it the end
-    def append(self, data):
+    def insert_last(self, data):
         new_node = Node(data)
         
         if self.head is None:
@@ -38,7 +38,7 @@ class LinkedList:
         last_node.next = new_node
     
     #adding node at the begining 
-    def prepend(self, data):
+    def insert_first(self, data):
         new_node = Node(data)
         
         if self.head is None:
@@ -81,15 +81,15 @@ class LinkedList:
         curr_node.next = curr_node.next.next
         
         
-llist = LinkedList()
-llist.append("A")
-llist.append("B")
-llist.append("D")
+arr = LinkedList()
+arr.insert_last("A")
+arr.insert_last("B")
+arr.insert_last("D")
 #llist.print_list()
-llist.insert_at("C",1)
+arr.insert_at("C",1)
 #llist.print_list()
-llist.delete_at(2)
-llist.print_list()
+arr.delete_at(2)
+arr.print_list()
 
 
     
